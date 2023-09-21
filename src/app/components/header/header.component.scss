@@ -1,0 +1,41 @@
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-button {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin-top: 10px;
+      align-self: flex-end;
+    }
+  }
+
+  .menu-items {
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .show-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drop-down-menu {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+}

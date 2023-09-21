@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <div class="header-content">
+    <a href="https://www.keyfactor.com" target="_blank">
+      <img src="./../../../assets/img/logo-dark.svg" alt="Keyfactor logo"/>
+    </a>
+  </div>
+  <div class="menu-items">
+    <button mat-button routerLink="/certificates">Certificates</button>
+    <button mat-button routerLink="/users">Users</button>
+    <button mat-button routerLink="/settings">Settings</button>
+  </div>
+  <button mat-icon-button [matMenuTriggerFor]="appMenu" class="drop-down-menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #appMenu="matMenu" >
+    <ng-template matMenuContent let-name="name">
+      <button mat-menu-item>Certificates</button>
+      <button mat-menu-item>Users</button>
+      <button mat-menu-item>Settings</button>
+    </ng-template>
+  </mat-menu>
+</mat-toolbar>
+
